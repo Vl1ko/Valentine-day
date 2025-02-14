@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С Днём всех влюблённых, любимая!</title>
+    <style>
+        body {
+            font-family: 'Pacifico', cursive;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: #ff4757;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        p {
+            font-size: 1.8rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #2f3542;
+        }
+        .heart {
+            color: #ff4757;
+            font-size: 6rem;
+            animation: beat 1s infinite, float 5s ease-in-out infinite;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .heart:hover {
+            transform: scale(1.2);
+        }
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .signature {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #2f3542;
+            margin-top: 20px;
+        }
+        .hearts-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .hearts-background span {
+            position: absolute;
+            color: #ff4757;
+            font-size: 2rem;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100vh); }
+        }
+        .button {
+            background: #ff4757;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background: #ff6b81;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hearts-background">
+        <!-- Генерация сердечек на фоне -->
+        <span style="left: 5%; animation-duration: 10s;">❤️</span>
+        <span style="left: 15%; animation-duration: 8s;">❤️</span>
+        <span style="left: 25%; animation-duration: 12s;">❤️</span>
+        <span style="left: 35%; animation-duration: 9s;">❤️</span>
+        <span style="left: 45%; animation-duration: 11s;">❤️</span>
+        <span style="left: 55%; animation-duration: 7s;">❤️</span>
+        <span style="left: 65%; animation-duration: 10s;">❤️</span>
+        <span style="left: 75%; animation-duration: 8s;">❤️</span>
+        <span style="left: 85%; animation-duration: 12s;">❤️</span>
+        <span style="left: 95%; animation-duration: 9s;">❤️</span>
+    </div>
+    <div class="container">
+        <h1>С Днём всех влюблённых!</h1>
+        <p>Моя дорогая,</p>
+        <p>Ты — самое прекрасное, что случилось в моей жизни. Каждый день с тобой — это праздник, а сегодня я хочу сказать тебе, как сильно я тебя люблю. Ты моё счастье, моя мечта и моя любовь!</p>
+        <p>Пусть этот день будет наполнен теплом, улыбками и нашими самыми яркими моментами. Я всегда буду рядом, чтобы делать твою жизнь ещё прекраснее.</p>
+        <div class="heart" onclick="alert('Я люблю тебя! ❤️')">❤️</div>
+        <p class="signature">С любовью, твой [Ваше имя]</p>
+        <button class="button" onclick="showMessage()">Нажми на меня!</button>
+    </div>
+
+    <script>
+        function showMessage() {
+            alert("Ты самая лучшая! Спасибо за то, что ты есть ❤️");
+        }
+    </script>
+</body>
+</html>
